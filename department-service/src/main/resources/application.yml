@@ -10,13 +10,13 @@ eureka:
   instance:
     hostname: localhost
 
-#spring:
-#  application:
-#    name: DEPARTMENT-SERVICE
+spring:
+  application:
+    name: DEPARTMENT-SERVICE
 #  cloud:
 #    config:
 #      enabled: true
 #      uri: http://localhost:9296
 
-#  zipkin:
-#    base-url: http://127.0.0.1:9411/
+  zipkin:
+    base-url: http://127.0.0.1:9411/

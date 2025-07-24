@@ -1,4 +1,4 @@
-package com.dailycodebuffer.cloud.gateway;
+package com.dailycodebuffer.cloud.gateway.cloud.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
