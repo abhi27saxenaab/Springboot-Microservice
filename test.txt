@@ -1,1 +1,33 @@
-s
+Input Type 					Token
+Name  						SpringSplunkDemo
+Source name override		sourcename
+Description					description
+
+Allowed indexes spring_dev	
+
+Default index 				spring_dev
+Source Type					log4j
+App Context					launcher
+
+
+673c86ac-0e57-4a84-9647-14a582eda376
+
+
+source="sourcename" (index="spring_dev") sourcetype="log4j"
+
+
+
+
+
+
+http://127.0.0.1:7000/
+http://DESKTOP-36MCC96:7000
+
+
+
+https://www.youtube.com/watch?v=w0XtlOjxag0
+
+
+curl -k http://localhost:7000/services/collector/health -H "Authorization: 673c86ac-0e57-4a84-9647-14a582eda376"
+
+curl -k http://localhost:8089/services/collector -H "Authorization: Splunk 673c86ac-0e57-4a84-9647-14a582eda376" -d '{"event": "test message", "sourcetype": "log4j",  "source"="http-event-logs"}'

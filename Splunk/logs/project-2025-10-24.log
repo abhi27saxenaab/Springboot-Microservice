@@ -1,0 +1,7 @@
+22:10:57.436 !== [main] INFO  com.example.demo.DemoApplication -- Starting DemoApplication using Java 17.0.12 with PID 2428 (D:\WorkSpace\Java\demo2\target\classes started by Abhishek Saxena in D:\WorkSpace\Java\demo2)
+22:10:57.564 !== [main] DEBUG com.example.demo.DemoApplication -- Running with Spring Boot v3.5.4, Spring v6.2.9
+22:10:57.567 !== [main] INFO  com.example.demo.DemoApplication -- No active profile set, falling back to 1 default profile: "default"
+22:10:59.728 !== [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -- Tomcat initialized with port 8080 (http)
+22:10:59.755 !== [main] INFO  o.a.coyote.http11.Http11NioProtocol -- Initializing ProtocolHandler ["http-nio-8080"]
+22:10:59.762 !== [main] INFO  o.a.catalina.core.StandardService -- Starting service [Tomcat]
+22:10:59.766 !== [main] INFO  o.a.catalina.core.StandardEngine -- Starting Servlet engine: [Apache Tomcat/10.1.43]

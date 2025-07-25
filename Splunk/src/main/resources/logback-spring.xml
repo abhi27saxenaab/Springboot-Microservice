@@ -1,0 +1,39 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} == [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+        </encoder>
+
+    </appender>
+
+    <appender name="FILE_SOUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/project.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/project-%d{yyyy-mm-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} !== [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="SPLUNK" class="com.splunk.logging.HttpEventCollectorLogbackAppender">
+        <url>http://localhost:8089</url> <!-- Splunk HEC endpoint -->
+        <token>673c86ac-0e57-4a84-9647-14a582eda376</token> <!-- Replace with your token -->
+        <index>spring_dev</index> <!-- Optional: Defaults to "main" -->
+        <source>http-event-logs</source> <!-- Optional: Source identifier -->
+        <disableCertificateValidation>true</disableCertificateValidation> <!-- For HTTPS (dev only) -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE_SOUT" />
+        <appender-ref ref="SPLUNK" /> <!-- Send logs to Splunk -->
+
+    </root>
+</configuration>
